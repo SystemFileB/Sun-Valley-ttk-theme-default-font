@@ -3,7 +3,7 @@ name: Build
 on: [push,pull_request]
 
 jobs:
-  mctoast-snapshot-builder:
+  build:
     runs-on: ubuntu-latest
 
     steps:
