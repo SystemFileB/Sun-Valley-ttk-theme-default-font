@@ -33,6 +33,6 @@ jobs:
     - name: 上传 Artifact 源代码
       uses: actions/upload-artifact@v4
       with:
-        name: sv-ttk
+        name: sv-ttk-source
         path: dist/*.tar.gz
       
