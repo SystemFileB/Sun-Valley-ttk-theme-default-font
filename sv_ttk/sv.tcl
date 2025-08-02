@@ -10,14 +10,15 @@ if {[tk windowingsystem] == "win32"} {
   set static " static"
 }
 
-font create SunValleyCaptionFont -family "Segoe UI Variable$static Small" -size -12
-font create SunValleyBodyFont -family "Segoe UI Variable$static Text" -size -14
-font create SunValleyBodyStrongFont -family "Segoe UI Variable$static Text Semibold" -size -14
-font create SunValleyBodyLargeFont -family "Segoe UI Variable$static Text" -size -18
-font create SunValleySubtitleFont -family "Segoe UI Variable$static Display Semibold" -size -20
-font create SunValleyTitleFont -family "Segoe UI Variable$static Display Semibold" -size -28
-font create SunValleyTitleLargeFont -family "Segoe UI Variable$static Display Semibold" -size -40
-font create SunValleyDisplayFont -family "Segoe UI Variable$static Display Semibold" -size -68
+set defaultFont [font actual TkDefaultFont -family]
+font create SunValleyCaptionFont -family $defaultFont -size -12
+font create SunValleyBodyFont -family $defaultFont -size -14
+font create SunValleyBodyStrongFont -family $defaultFont -size -14
+font create SunValleyBodyLargeFont -family $defaultFont -size -18
+font create SunValleySubtitleFont -family $defaultFont -size -20
+font create SunValleyTitleFont -family $defaultFont -size -28
+font create SunValleyTitleLargeFont -family $defaultFont -size -40
+font create SunValleyDisplayFont -family $defaultFont -size -68
 
 
 proc config_entry_font {w} {
